@@ -80,12 +80,13 @@ class MyView1 extends PageViewElement {
     background-size: cover;
     color: white;
     text-align: left;
+    background-color: #232D32;
   }
   .container {
     @apply --layout-horizontal;
     max-width: 100%;
     margin: 5px auto;
-    
+    background-color: #232D32;
   }
   .container > * {
     @apply --layout-flex;
@@ -148,13 +149,13 @@ class MyView1 extends PageViewElement {
     background-color: #16df82 !important;
   }
     
-    .column {
-        position: relative;
-        float: left;
-        width: 25%;
-        padding: 0px;
-        height: 100vh; 
-    }
+  .column {
+      position: relative;
+      float: left;
+      width: 25%;
+      padding: 0px;
+      height: 100vh; 
+  }
     .column:nth-child(1){
         background: url('./images/teacher.webp');
         background-position: center;
@@ -235,14 +236,33 @@ class MyView1 extends PageViewElement {
       .column>h2{
          font-size: 60px;
       }
+    }
+    footer {
+      padding: 24px;
+      background: var(--app-drawer-background-color);
+      background:linear-gradient(#232D32 , #111619);
+      text-align: center;
+      color:  var(--app-header-text-color);
     }  
+    ul{
+      list-style:none;    
+      display: inline-block;
+      padding:0px;
+      margin-top:0px;
+    }
+    li{
+      display: inline-block;  
+    }
+    footer>p{
+      font-size: 12px;
+    }
     </style>
     <app-header-layout>
       
       <header>
       <br>
       <img src="images/plane-green.svg" style="width: 70%; height: 70%;">
-        <h2 ><span style="font-family: 'Raleway', sans-serif; font-weight: 900;">TDC </span><span style="font-family:'fira sans';">'18</span></h2>
+        <h2 ><span style="font-family: 'Raleway', sans-serif; font-weight: 900;">TDC </span><span style="font-family:'Fira Sans', sans-serif; font-weight:800">'18</span></h2>
         <p>Building a startup is never easy. But we can always make it easier.</p>
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Get Started Now</a>
         <h6>(There's no time like the present)</h6>
@@ -313,6 +333,26 @@ class MyView1 extends PageViewElement {
         make a better tomorrow.</p>
       </div>
     </div>
+  <footer>
+        <p style="font-size:15px;"> Explore our Social Media and Get in touch: </p>
+        <ul> 
+          <li>
+              <a href="https://www.facebook.com/TDCSIF/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 56 55"><title>Facebook</title><path fill="#fff" d="M47.5 43c0 1.2-.9 2.1-2.1 2.1h-10V30h5.1l.8-5.9h-5.9v-3.7c0-1.7.5-2.9 3-2.9h3.1v-5.3c-.6 0-2.4-.2-4.6-.2-4.5 0-7.5 2.7-7.5 7.8v4.3h-5.1V30h5.1v15.1H10.7c-1.2 0-2.2-.9-2.2-2.1V8.3c0-1.2 1-2.2 2.2-2.2h34.7c1.2 0 2.1 1 2.1 2.2V43"></path></svg></a>
+          </li>
+          <li>
+              <a href="https://www.instagram.com/thedisruptionchallenge/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 54 54"><title>instagram</title><path fill="#fff" d="M27.2 6.1c-5.1 0-5.8 0-7.8.1s-3.4.4-4.6.9c-1.2.5-2.3 1.1-3.3 2.2-1.1 1-1.7 2.1-2.2 3.3-.5 1.2-.8 2.6-.9 4.6-.1 2-.1 2.7-.1 7.8s0 5.8.1 7.8.4 3.4.9 4.6c.5 1.2 1.1 2.3 2.2 3.3 1 1.1 2.1 1.7 3.3 2.2 1.2.5 2.6.8 4.6.9 2 .1 2.7.1 7.8.1s5.8 0 7.8-.1 3.4-.4 4.6-.9c1.2-.5 2.3-1.1 3.3-2.2 1.1-1 1.7-2.1 2.2-3.3.5-1.2.8-2.6.9-4.6.1-2 .1-2.7.1-7.8s0-5.8-.1-7.8-.4-3.4-.9-4.6c-.5-1.2-1.1-2.3-2.2-3.3-1-1.1-2.1-1.7-3.3-2.2-1.2-.5-2.6-.8-4.6-.9-2-.1-2.7-.1-7.8-.1zm0 3.4c5 0 5.6 0 7.6.1 1.9.1 2.9.4 3.5.7.9.3 1.6.7 2.2 1.4.7.6 1.1 1.3 1.4 2.2.3.6.6 1.6.7 3.5.1 2 .1 2.6.1 7.6s0 5.6-.1 7.6c-.1 1.9-.4 2.9-.7 3.5-.3.9-.7 1.6-1.4 2.2-.7.7-1.3 1.1-2.2 1.4-.6.3-1.7.6-3.5.7-2 .1-2.6.1-7.6.1-5.1 0-5.7 0-7.7-.1-1.8-.1-2.9-.4-3.5-.7-.9-.3-1.5-.7-2.2-1.4-.7-.7-1.1-1.3-1.4-2.2-.3-.6-.6-1.7-.7-3.5 0-2-.1-2.6-.1-7.6 0-5.1.1-5.7.1-7.7.1-1.8.4-2.8.7-3.5.3-.9.7-1.5 1.4-2.2.7-.6 1.3-1.1 2.2-1.4.6-.3 1.6-.6 3.5-.7h7.7zm0 5.8c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7 5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7zm0 16c-3.5 0-6.3-2.8-6.3-6.3s2.8-6.3 6.3-6.3 6.3 2.8 6.3 6.3-2.8 6.3-6.3 6.3zm12.4-16.4c0 1.3-1.1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-1.2 1-2.3 2.3-2.3 1.2 0 2.3 1.1 2.3 2.3z"></path></svg></a>
+          </li>
+          <li>
+              <a href="mailto:info.tdc18@gmail.com?Subject=I%20have%20a%20query." target="_top"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 56 43"><title>email</title><path fill="#fff" d="M10.5 6.4C9.1 6.4 8 7.5 8 8.9v21.3c0 1.3 1.1 2.5 2.5 2.5h34.9c1.4 0 2.5-1.2 2.5-2.5V8.9c0-1.4-1.1-2.5-2.5-2.5H10.5zm2.1 2.5h30.7L27.9 22.3 12.6 8.9zm-2.1 1.4l16.6 14.6c.5.4 1.2.4 1.7 0l16.6-14.6v19.9H10.5V10.3z"></path></svg></a>
+          </li>
+      </ul>
+      <p>
+      <a href="https://mytdc.github.io/tdcconnects" target="_blank">Our TDC | Connects portal - mytdc.github.io/tdcconnects</a>
+      </p>  
+      <p> TDC | Connects is a part of The Disruption Challenge 2018
+      <p>An SIF initiative © FGC 2018</p>
+  </footer>
+
     `;
   }
 }
