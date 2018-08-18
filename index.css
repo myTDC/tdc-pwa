@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/Q_Z9mv4hySLTMoMjnk_rCXYhjbSpvc47ee6xR_80Hnw.woff2) format('woff2');
+    /* THe browser draws the text immediately in the fallback font if the font
+       isn't loaded, then swaps it with the webfont when it eventually loads
+       See: https://developers.google.com/web/updates/2016/02/font-display
+    */
+    font-display: swap;
+  }
+  body {
+    margin: 0; 
+    background-color: #232D32;
+    /* This is a font-stack that tries to use the system-default sans-serifs first */
+    font-family: Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    
+  }
+  .hero{
+    max-width: 40%; 
+    margin-left: 30%
+  }
+* {
+    box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+  }
+.toolbar {
+  @apply --layout-horizontal;
+  @apply --layout-end-justified;
+  background-color: rgba(255, 255, 255, 0.95);
+  }
+.tabs {
+height: 100%;
+@apply --layout-horizontal;
+}
+.tabs > a {
+@apply --layout-vertical;
+@apply --layout-center-center;
+margin: 12px 16px 12px;
+border-bottom: 1px solid #222;
+}
+#header {
+@apply --layout-vertical;
+@apply --layout-center-center;
+max-height: 100vh;
+max-width: 100%;
+padding: 0 16px;
+background:radial-gradient(closest-side at 50%, #455A64,  #232D36);
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+text-align: center;
+}
+#header > h2 {
+font-size: 90px;
+font-weight: 500;
+margin: 0;
+color:white;
+
+}
+:host {
+    display: block;
+    box-sizing: border-box;
+  }
+
+  section {
+    padding: 24px;
+    
+  }
+
+  section > * {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  section:nth-of-type(even) {
+    
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    color: var(--app-dark-text-color);
+  }
+
+  @media (min-width: 460px) {
+    h2 {
+      font-size: 36px;
+    }
+
+  }
+
+  .circle {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--app-primary-color);
+    color: var(--app-light-text-color);
+    font-size: 30px;
+    line-height: 64px;
+  }
+#header > p {
+font-size: 18px;
+font-family: 'Open Sans';
+}
+#header > h6 {
+font-family: 'Open Sans';
+font-size: 12px;
+font-weight:300;
+margin:2px 0px 8px 0px;
+}
+section {
+/*padding: 88px 16px;*/
+@apply --layout-vertical;
+@apply --layout-center-center;
+height: calc(100vh - 64px);
+padding: 30px 20px;
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+text-align: left;
+}
+.container {
+@apply --layout-horizontal;
+max-width: 100%;
+margin: 5px auto;
+
+}
+.container > * {
+@apply --layout-flex;
+}
+.container img {
+max-width: 100%;
+max-height: calc(100vh - 64px);
+border-radius:4%;
+}
+
+.container h3 {
+font-size: 32px;
+font-weight: 300;
+margin: 5px 30px;
+font-family:Fira sans;
+
+}
+.container p {
+line-height: 1.5;
+font-family:Open sans;
+margin: 0px 30px;
+
+}
+@media (max-width: 600px) {
+    .hero{
+        max-width: 100%; 
+        margin-left:0%
+      }
+.container {
+  @apply --layout-vertical;
+  display:table;
+  }
+.container p{
+    font-size: 14px;
+  }
+.container h3{
+  font-size: 24px;
+}  
+  .div1 {
+    display:table-footer-group;  
+  }
+  .div2 {
+    display:table-header-group;
+  }
+  section{
+  height: calc(110vh);}
+}
+.btn {
+font-weight: 548;
+text-transform: uppercase;
+border: none;
+border-radius: 10px;
+color: #000;
+font-family: 'Open Sans',sans-serif;
+}
+.btn-xl {
+padding: 0.5rem 1rem;
+}
+.btn-primary {
+background-color: #fff;
+border-color: #fff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+background-color: #16df82 !important;
+}
+
+.column {
+    position: relative;
+    float: left;
+    width: 25%;
+    padding: 0px;
+    height: 100vh; 
+}
+.column:nth-child(1){
+    background: url('./images/teacher.webp');
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    transition: background-size 2s;
+}
+.column:nth-child(2){
+    background: url('./images/student.webp');
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    transition: background-size 2s;
+}
+.column:nth-child(3){
+    background: url('./images/investor.webp');
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    transition: background-size 2s;
+}
+.column:nth-child(4){
+    background: url('./images/sponsor.webp');
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    transition: background-size 2s;
+}
+div.column:hover{
+  background-size:130%;
+}
+
+.grad{
+  height:100%;
+  background: linear-gradient(#232D32, rgba(0,0,00,0), #232D32);
+  opacity:50;
+  transition: opacity 2s;
+  }
+div.grad:hover{
+  opacity:0; 
+}
+
+.content-lg-md{
+    color: white; 
+    text-align:justify; 
+    padding-right: 90px; 
+    padding-left: 40px;
+}
+
+.content-sm-xs{
+    color: white; 
+    text-align:justify; 
+    padding-left: 50px; 
+    padding-right: 50px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column>h2{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  color: #FF5722;
+  transform: translate(-50%, -50%);
+}
+.column>p{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  text-align:center;
+  position: absolute;
+  bottom: 5px;
+  padding: 20px;
+  color:#fff;
+}
+
+@media screen and (max-width: 1028px) {
+  .column {
+      width: 50%;
+  }
+
+}  
+
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+  }
+  .column>h2{
+     font-size: 60px;
+  }
+}  
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+      :host {
+        --app-drawer-width: 300px;
+        display: block;
+
+        --app-primary-color: #455A64;
+        --app-primary-dark-color: #1C313A;
+        --app-secondary-color: #293237;
+        --app-accent-color: #00C853;
+        --app-dark-text-color: var(--app-secondary-color);
+        --app-light-text-color: white;
+        --app-section-even-color: #f7f7f7;
+        --app-section-odd-color: white;
+
+        --app-header-background-color: var(--app-primary-dark-color);
+        --app-header-text-color: #90A4AE;
+        --app-header-selected-color: var(--app-accent-color);
+
+        --app-drawer-background-color: var(--app-primary-dark-color);
+        --app-drawer-text-color: var(--app-light-text-color);
+        --app-drawer-selected-color: #2962FF;
+      }
+      
+      app-header {
+        position: fixed;
+        z-index: 999;
+        height: 64px;
+        left: 0;
+        width: 100%;
+        text-align: left;
+        background-color: var(--app-header-background-color);
+        color: var(--app-header-text-color);
+        border-bottom: 3px solid #2962FF;
+        
+      }
+
+      #navbar{
+      
+      }
+
+      .toolbar-top {
+        height: 55px;
+        background-color: var(--app-header-background-color);
+      }
+
+      [main-title] {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: regular;
+        font-size: 15px;
+        text-align: center;
+        /* In the narrow layout, the toolbar is offset by the width of the
+        drawer button, and the text looks not centered. Add a padding to
+        match that button */
+        padding-left: 20px;
+      }
+
+      .toolbar-list {
+        display: none;
+        outline: none;
+      }
+
+      .toolbar-list > a {
+        display: inline-block;
+        color: var(--app-header-text-color);
+        text-decoration: none;
+        line-height: 30px;
+        padding: 4px 24px;
+        outline: none;
+      }
+
+      .toolbar-list > a[selected] {
+        color: var(--app-header-selected-color);
+        border-bottom: 4px solid var(--app-header-selected-color);
+      }
+
+      .menu-btn-left {
+        background: none;
+        border: none;
+        position: fixed;
+        left:2%;
+        cursor: pointer;
+        height: 35px;
+        width: 35px;
+        outline: none;
+      }
+
+      .menu-btn-right {
+        background: none;
+        border: none;
+        position: fixed;
+        right:2%;
+        fill: var(--app-header-text-color);
+        cursor: pointer;
+        height: 44px;
+        width: 44px;
+        outline: none;
+      }
+
+      .wifi-status{
+        background: none;
+        border: none;
+        position: fixed;
+        right:23%;
+        fill: #2962FF;
+        cursor: pointer;
+        height: 44px;
+        width: 44px;
+        outline: none;
+      }
+
+      @media (max-width: 460px){
+        .wifi-status{
+          display: none;
+        }
+      }
+      .drawer-list {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 24px;
+        background: var(--app-drawer-background-color);
+        position: relative;
+        outline: none;
+      }
+
+      .drawer-list > a {
+        display: block;
+        text-decoration: none;
+        color: var(--app-drawer-text-color);
+        line-height: 40px;
+        padding: 0 24px;
+        outline: none;
+      }
+
+      .drawer-list > a[selected] {
+        color: var(--app-drawer-selected-color);
+        outline: none;
+      }
+
+      /* Workaround for IE11 displaying <main> as inline */
+      main {
+        display: block;
+      }
+
+      .main-content {
+        padding-top: 64px;
+        min-height: 100vh;
+        padding: 0px;
+        margin:0px;
+      }
+
+      .page {
+        display: none;
+      }
+
+      .page[active] {
+        display: block;
+      }
+
+      #footer {
+        padding: 24px;
+        background: var(--app-drawer-background-color);
+        color: white;
+        text-align: center;
+      }
+
+      /* Ripple effect */
+      .ripple {
+        background-position: center;
+        transition: background 0.8s;
+        border-radius: 3px;
+      }
+      .ripple:hover {
+        background: #455A64 radial-gradient(circle, transparent 1%, #37474F 1%) center/15000%;
+      }
+      .ripple:active {
+        background-color: #37474F;
+        background-size: 100%;
+        transition: background 0s;
+      }
+
+      /* Wide layout: when the viewport width is bigger than 460px, layout
+      changes to a wide layout. */
+      @media (min-width: 460px) {
+        .toolbar-list {
+          display: block;
+        }
+      }  
+        .main-content {
+          padding-top: 64px;
+        }
+        .mybrand{
+          font-family: 'Fira Sans', sans-serif;
+        }
+    #footer{
+      background:linear-gradient(rgba(0,0,0,0) , #161c1e);
+    }
+    ul{
+      list-style:none;    
+      display: inline-block;
+    }
+    li{
+      display: inline-block;
+      
+    }
